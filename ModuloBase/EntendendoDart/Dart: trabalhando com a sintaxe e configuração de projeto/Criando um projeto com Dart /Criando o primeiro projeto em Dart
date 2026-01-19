@@ -1,0 +1,102 @@
+Após instalar o Dart na sua máquina, abriremos o terminal. Durante este curso, utilizaremos o terminal para configurar e gerar um projeto Dart.
+
+Ao abrir o terminal, estaremos numa pasta chamada "home", independentemente de estarmos no Mac, Linux ou Windows - a menos que outra configuração tenha sido feita.
+
+Para ver os conteúdos dessa pasta "home", utilizaremos um comando chamado ls, que serve para listar as pastas dentro deste diretório.
+
+>>>> ls
+
+Retorno do terminal:
+
+AndroidStudioProjects     Music
+Applications              Pictures
+Desktop                   Postman
+Documents                 Public
+Downloads                 StoreItemView.swift
+Library                   StoresContainerView.swift
+Movies                    ios-server-driven-swift-bank
+
+Entre elas, tenho uma pasta chamada "Documents", onde vou gerar o projeto Dart.
+
+No Windows, existem dois terminais que podemos utilizar: o terminal de comando, ou CMD, e o PowerShell. Recomendamos utilizar o PowerShell no Windows para seguir as informações deste curso. Para Linux e Mac, os comandos utilizados aqui serão os mesmos e não haverá diferença.
+
+Para navegar até a pasta "Documents", digitaremos o seguinte comando no terminal:
+
+>>> cd Documents
+
+O nome da pasta "Documents" pode estar em português ou em inglês. É muito importante escrever o nome dela exatamente como aparecer no terminal, respeitando letras maiúsculas minúsculas, porque o terminal é case sensitive (sensível a maiúsculas e minúsculas). Ou seja, as letras maiúsculas e minúsculas influenciam no terminal encontrar ou não algum arquivo ou diretório.
+
+Dentro da pasta "Documents", digitaremos novamente ls para ver o que há dentro dela.
+
+3803-iOS-trabalhando-com-testes-de-unidade-no-app
+3804-Andriu
+Blockchain_Vinicius
+TaskyApp
+anybank
+flutter
+ios-chef-delivery-unit-test-mock-stub-84b225cc43892a978b3616c3e182074e62
+72b44d
+
+Dentro desse diretório, criaremos uma pasta chamada "dart" utilizando o comando abaixo:
+
+>>>> mkdir dart
+
+Para conferir a criação dessa pasta, rodaremos novamente o comando ls.
+
+Retorno do terminal:
+
+3803-iOS-trabalhando-com-testes-de-unidade-no-app
+3804-Andriu
+Blockchain_Vinicius
+TaskyApp
+anybank
+dart
+flutter
+ios-chef-delivery-unit-test-mock-stub-84b225cc43892a978b3616c3e182074e62
+72b44d
+
+Navegaremos até a pasta "dart" com cd dart.
+
+cd dart
+
+Em seguida, rodaremos o comando ls novamente para verificar que a nada será retornado e, portanto, a pasta "dart" está vazia, conforme esperado.
+
+
+Gerando o primeiro projeto
+
+>>> dart create meu_app
+>>> cd meu_app
+>>> dart run
+
+Abrindo o projeto na IDE >> Na janela exibida, clicaremos uma vez na pasta "meu_app" que criamos dentro do terminal, por meio do caminho "Documentos > Dart". Em seguida, no canto inferior direito, clicaremos no botão "Open" ("Abrir").
+
+import 'package:meu_app/meu_app.dart' as meu_app;
+
+void main(List<String> arguments) {
+    print('Hello world: ${meu_app.calculate()}!');
+}
+
+LIMPANDO O ARQUIVO
+
+void main() {
+
+}
+
+Para um programa em Dart rodar, precisamos, essencialmente, desse void main, um bloco de parênteses e outro de chaves. Isso é o mínimo que ele precisa para funcionar.
+
+Agora, escreveremos nossa versão da mensagem "Hello World". Para isso, usaremos o comando print(), que possui um bloco de parênteses.
+
+Ao abrir parênteses, é possível que o Visual Studio Code os feche automaticamente.
+
+Entre esses parênteses, adicionaremos entre aspas duplas um texto que queremos - por exemplo, o "Hello World" que existia antes. Por fim, no final dessa linha, precisamos colocar ponto e vírgula (;).
+
+void main() {
+    print("Hello World");
+}
+
+Executando a aplicação >> dart run
+
+
+
+
+
