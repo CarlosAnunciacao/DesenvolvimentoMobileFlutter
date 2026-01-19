@@ -1,0 +1,6 @@
+void main() {
+  print("Olá, me chamo Carlos. Qual o seu nome?");
+  var nome = stdin.readLineSync;
+  print("Certo! Qual é a sua idade?");
+  var idade = stdin.readLineSync;
+  print("Muito prazer, $nome, a sua idade é $idade. Seja bem-vindo!!");
