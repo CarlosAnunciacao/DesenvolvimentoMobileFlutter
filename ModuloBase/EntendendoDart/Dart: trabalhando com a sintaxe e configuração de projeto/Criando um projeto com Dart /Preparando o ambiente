@@ -1,0 +1,182 @@
+1) Verificar as especificações do sistema;
+
+2) Instalar o Flutter SDK para usar a linguagem Dart na sua máquina;
+
+3) Adicionar o Flutter SDK para usar o Dart no terminal do seu computador (necessário para criarmos um projeto Dart e outras coisas mais).
+
+Siga o tutorial com atenção e, se precisar, chame-nos no Fórum ou Discord. Após completar os três passos, você pode prosseguir com o curso.
+
+Vamos lá?
+
+Primeiro, veja as especificações mínimas do sistema.
+1. Especificações para rodar Dart no seu computador
+
+Embora este curso seja apenas para Dart, você muito provavelmente está aqui para chegar no objetivo final de aprender Flutter. Por isso, estes pré-requisitos foram montados para que você tenha uma experiência suave do início ao fim de sua jornada.
+1.1. Quais os requisitos mínimos de hardware e do sistema?
+Requisitos	Mínimo
+(Windows) Para virtualização	Windows 10 Pro ou 11 Pro
+CPU	Intel i5 8600 / AMD Ryzen 5 2600x
+RAM	8GB
+Resolução de Tela	WXGA (1366 x 768)
+Espaço livre de armazenamento em GB	50 GB
+
+    Os requisitos mínimos para Macs é de um Intel MacBook Pro (2018) pra cima. Como os computadores Mac com processadores Intel foram descontinuados, é possível que máquinas mais antigas e mais fracas do que o Intel MacBook Pro (2018) não tenham as atualizações necessárias e nem a performance ideal para seguir com o curso.
+
+Agora que você conferiu se seu computador é capaz de rodar a linguagem Dart, é hora de instalar o Flutter SDK. Por quê instalar o Flutter se não vamos utilizá-lo neste curso? É porque o Dart já vem contido no SDK do Flutter, portanto, ao instalar o Flutter em sua máquina, você tem acesso às ferramentas Dart também. Isso facilita a vida quando você, lá na frente, começar a estudar o Flutter.
+
+Mas vamos, agora, nos concentrar em estudar apenas o Dart, ok?
+2. Como instalar o Flutter SDK no seu computador
+
+Para instalar o SDK do Flutter, você pode utilizar a ferramenta do próprio Visual Studio Code:
+
+1) Abra o Visual Studio Code:
+
+Tela inicial do Visual Studio Code em modo escuro, mostrando opções para abrir comandos, arquivos, recentes ou criar um novo arquivo de texto.
+
+2) Na aba lateral esquerda, clique na opção de extensões:
+
+Janela de extensões do Visual Studio Code, mostrando extensões instaladas como GitLens e bloc, com opções de busca e gerenciamento de extensões.
+
+3) Procure pela extensão chamada Flutter. Você pode verificar se a extensão é a correta pela organização que produziu a extensão, dartcode.org:
+Página da extensão Flutter no Visual Studio Code, que mostra detalhes como a versão 3.92.0, o número de downloads, as avaliações e opções para desinstalar ou mudar para a versão pré-lançamento.
+
+4) Abra o menu de comandos utilizando a combinação de teclas: Ctrl+Shift+p (Windows) ou CMD+Shift+p (macOS):
+
+Menu de comandos rápidos do Visual Studio Code, que mostra diversas opções como Toggle Zen Mode, Reload Window, Find in Files e Color Theme.
+
+5) Digite flutter e selecione a opção Flutter: New Project:
+
+Menu de comandos do Visual Studio Code com opções relacionadas ao Flutter, como New Project, Run Flutter Doctor e Run Flutter Upgrade.
+
+6) No canto inferior direito, irá aparecer uma janela com 3 opções. Clique na opção Download SDK. Atenção: para o download funcionar, você precisa ter o Git instalado na sua máquina:
+
+Mensagem de erro no Visual Studio Code indicando que o SDK do Flutter não foi encontrado, com opções para baixar, localizar o SDK ou exibir o log.
+
+7) Escolha um lugar para salvar o Flutter SDK. Recomendo deixar na pasta Documentos ou Documents:
+
+Mensagem no Visual Studio Code informando que o SDK do Flutter está sendo baixado, com um botão para cancelar a operação.
+
+8) Uma nova mensagem irá aparecer falando que o Flutter está sendo baixado.
+
+9) Após o término, uma nova janela irá aparecer perguntando se você gostaria de adicionar o Flutter SDK ao PATH para ser acessado em terminais externos. É extremamente recomendado que você adicione o Flutter SDK ao seu PATH.
+3. Como adicionar o Flutter SDK ao PATH do seu sistema operacional
+
+Como cada sistema tem sua maneira de adicionar o Flutter SDK no PATH do sistema operacional, vou deixar links da documentação explicando como você pode fazer essa configuração:
+
+    Windows;
+    macOS;
+    Linux.
+
+Se preferir, veja instruções mais detalhadas abaixo, de acordo com o sistema operacional (Windows, macOS ou Linux).
+3.1. Como adicionar o Flutter SDK ao PATH no Windows
+
+    Atenção: os prints do tutorial são do Windows 10. Caso você utilize um sistema operacional posterior, pode ser que o nome de alguns menus, janelas e opções sejam levemente diferentes. No entanto, a configuração é basicamente a mesma. Chame-nos no Fórum ou no Discord se precisar de ajuda.
+
+1) Acesse as “Configurações do sistema” (o ícone de engrenagem no menu Iniciar).
+
+2) Na janela Configurações do sistema, acesse a opção Configurações avançadas do sistema (que se encontra no menu lateral direito chamado Configurações relacionadas):
+
+Tela de informações do sistema no Windows, mostrando especificações do dispositivo e do sistema operacional, com uma seta vermelha destacando o link para "Configurações avançadas do sistema".
+
+3) Na janela Propriedades do Sistema, procure a aba Avançado e clique no botão Variáveis de ambiente no canto inferior direito:
+
+Janela de Propriedades do Sistema no Windows, na aba Avançado, destacando o botão "Variáveis de Ambiente" com uma seta vermelha.
+
+4) Na janela Variáveis de Ambiente, dentro da seção Variáveis de usuário para (nome do usuário), procure a entrada Path:
+
+4.1) Se a entrada Path existir, clique duas vezes nela:
+
+Janela de Variáveis de Ambiente no Windows, destacando a variável Path na seção de Variáveis de usuário com uma seta vermelha.
+
+4.1.2) A janela Editar variável de ambiente será exibida:
+
+Janela Editar a variável de ambiente no Windows, que contém uma lista dos caminhos incluídos na variável, com botões para adicionar, editar, procurar, excluir e mover os itens na lista.
+
+4.1.3) Clique duas vezes em uma linha vazia:
+
+Janela Editar a variável de ambiente no Windows, mostrando um novo caminho sendo digitado na lista de caminhos incluídos na variável.
+
+4.1.4) Digite %USERPROFILE%\Documents\flutter\bin:
+
+Janela Editar a variável de ambiente no Windows, mostrando o caminho `%USERPROFILE%\Documents\flutter\bin`do Flutter bin adicionado à lista de caminhos incluídos na variável.
+
+4.1.5) Clique na entrada %USERPROFILE%\Documents\flutter\bin:
+
+Janela Editar a variável de ambiente no Windows, mostrando o caminho do Flutter bin selecionado na última posição à lista de caminhos incluídos na variável.
+
+4.1.6) Clique botão Mover para cima até que a entrada do Flutter esteja no topo da lista:
+
+Janela Editar a variável de ambiente no Windows, mostrando o caminho do Flutter bin movido para o topo da lista, com uma seta vermelha destacando o botão "Mover para Cima".
+
+4.1.7) Clique em OK três vezes.
+
+Janela Editar a variável de ambiente no Windows, mostrando os caminhos incluídos e uma seta vermelha destacando o botão "OK" para salvar as alterações.
+Pronto! Com esses passos feitos, você pode ir para o passo 5.
+
+4.2) Na janela Variáveis de Ambiente, se a entrada PATH não existir no campo Valores de usuário…, clique em Novo:
+
+Janela de Variáveis de Ambiente no Windows, com um destaque na seção de Variáveis de usuário sem a variável Path e uma seta vermelha apontando para o botão "Novo...".
+
+4.2.1) A janela Editar variável de ambiente será exibida:
+
+Janela Nova Variável de Usuário no Windows, mostrando campos para inserir o nome e o valor da variável, com botões para procurar no diretório ou arquivo, OK e Cancelar.
+
+4.2.2) No campo Nome da variável, digite Path (com a primeira letra em caixa alta e as demais em caixa baixa):
+
+Janela Nova Variável de Usuário no Windows, com o campo "Nome da variável" preenchido com "Path" e uma seta vermelha destacando esse campo.
+
+4.2.3) No campo Valor da variável, digite %USERPROFILE%\Documents\flutterbin:
+
+Janela Nova Variável de Usuário no Windows, com o campo "Valor da variável" preenchido com o caminho `%USERPROFILE%\Documents\flutterbin` do Flutter bin e uma seta vermelha destacando esse campo.
+
+4.2.4) Clique em OK três vezes.
+
+Janela Nova Variável de Usuário no Windows no Windows, com o campo "Valor da variável" preenchido com o caminho do Flutter bin e uma seta vermelha destacando o botão "OK".
+
+5) Para habilitar essas alterações feitas no passo 4, feche e reabra qualquer prompt de comando e instâncias do PowerShell existentes.
+Pronto! Feita a adição do PATH do Flutter no Windows, você pode prosseguir com o curso.
+3.2. Como adicionar o Flutter SDK ao PATH no macOS
+
+Recomendamos que você utilize o terminal padrão do macOS.
+
+Para executar comandos Flutter no terminal, adicione o Flutter à variável de ambiente PATH. Este guia presume que seu Mac está executando o shell padrão mais recente (documentação em inglês), o zsh. O Zsh usa o arquivo .zshenv para variáveis de ambiente (documentação em inglês).
+
+1) Abra o terminal padrão do macOS.
+
+2) Se existir, abra o arquivo de variáveis de ambiente do Zsh ~/.zshrc no seu terminal. Se não existir, crie-o com o comando ~/.zshrc.
+
+3) Você pode utilizar o Visual Studio Code para editar o arquivo, abra o Visual Studio Code e clique para abrir uma pasta.
+
+Tela inicial do Visual Studio Code em modo escuro, com opções para abrir uma pasta, clonar um repositório ou criar um novo arquivo de texto, e uma mensagem informando que nenhum diretório foi aberto.
+
+4) No painel à esquerda, selecione a sua Home (é um ícone de casa e deve ter o nome do seu usuário). Depois clique em abrir ou open:
+
+Janela de diálogo do Finder no macOS, mostrando a navegação pelo sistema de arquivos. A pasta "kyrie" está selecionada, exibindo várias subpastas e arquivos, com a opção de abrir ou criar uma nova pasta.
+
+5) No explorador de arquivos, selecione o arquivo .zshrc:
+
+Explorador de arquivos do Visual Studio Code mostrando a estrutura de pastas e arquivos dentro da pasta "kyrie", incluindo arquivos de configuração como .zshrc, .gitconfig e pastas como Postman e Public.
+
+6) Copie a seguinte linha e cole-a no final do arquivo ~/.zshrc:
+
+Arquivo .zshrc aberto no Visual Studio Code, mostrando o comando export para adicionar o caminho do Flutter bin ao PATH do sistema.
+
+export PATH="$HOME/Documents/flutter/bin:$PATH"
+
+7) Salve o arquivo ~/.zshenv.
+
+8) Para aplicar esta alteração, reinicie todas as sessões de terminal abertas.
+
+Se você usar outro shell, confira este tutorial sobre como definir seu PATH (documentação em inglês).
+Pronto! Feita a adição do PATH do Flutter no macOS, você pode prosseguir com o curso.
+3.3. Como adicionar o Flutter SDK ao PATH no Linux
+
+No seu terminal do Linux, rode o seguinte comando:
+
+echo 'export PATH="/usr/bin/flutter/bin:$PATH"' >> ~/.bashrc
+
+Feito isso, verifique se a configuração foi bem sucedida.
+Pronto! Feita a adição do PATH do Flutter no Linux, você pode prosseguir com o curso.
+Conclusão
+
+Para este curso não será necessário configurar emulador/simulador, portanto só de ter o SDK pronto já é o suficiente para prosseguir com o curso.
