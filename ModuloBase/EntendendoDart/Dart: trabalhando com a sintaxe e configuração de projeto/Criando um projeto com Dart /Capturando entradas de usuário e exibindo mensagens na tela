@@ -1,0 +1,97 @@
+Capturando a entrada da pessoa usuária
+
+Voltando ao Visual Studio Code, fecharemos o terminal que tínhamos deixado aberto com o comando "Ctrl + J". Voltando ao editor de código, no arquivo meu_app.dart, acessaremos o final da linha que possui a função print(), onde escrevemos a mensagem "Hello World".
+
+Pressionando ""Enter"" para acessar a linha de baixo, ainda dentro dos parênteses do print(), escreveremos o comando stdin.
+
+void main() {
+    print("Hello World");
+    stdin
+}
+
+O comando stdin, por si só, não é suficiente para capturar alguma informação. Portanto, adicionaremos um ponto e chamar outra função chamada readLineSync().
+
+Ela possui três palavras juntas, onde read começa com R minúsculo, Line e Sync com L e S maiúsculos. Essa prática de escrever palavras juntas com iniciais maiúsculas a partir da segunda palavra facilita a leitura do código e se chama Camel Case, porque cria a ilusão de corcovas de camelo.
+
+void main() {
+    print("Hello World");
+    stdin.readLineSync();
+}
+
+Vamos salvar o arquivo com "Ctrl + S", abrir o terminal com "Ctrl + J" e rodar o comando dart run.
+
+Logo depois de enviar o comando, ele exibirá a mensagem "Hello World", mas não exibirá o caminho da pasta após rodar o programa, como no terminal padrão. Em vez disso, ele apenas posicionou o cursor na próxima linha.
+
+Dessa forma, conseguimos digitar alguma coisa para o programa, como por exemplo um "Olá":
+
+Olá
+
+Mencionamos que o stdin é uma ferramenta do próprio Dart para capturar informações de dados de uma pessoa usuária. Entretanto, no topo do arquivo, fizemos um import, porque a ferramenta da IDE provavelmente vai fazer esse import automaticamente.
+
+Se ele fez um import, significa que foi necessário colocar alguma coisa extra dentro do arquivo e do programa. No topo do arquivo, onde adicionamos todos os import, existe agora um import 'dart:io'.
+
+import 'dart:io';
+
+void main() {
+    print("Hello World");
+    stdin.readLineSync();
+}
+
+Armazenando a entrada
+
+Nesse momento, estamos coletando as informações da pessoa usuária, digitadas no teclado, quando ela executa o programa. Mas, para onde vai essa informação digitada?
+
+Para lugar nenhum, na verdade. Estamos capturando e deixando ela sumir depois que o programa fecha.
+
+Vamos guardar essa informação em algum lugar?
+
+Para guardar a informação que a pessoa digita em algum lugar, podemos usar variáveis. Trata-se de um conceito no qual podemos guardar dados dentro do Dart.
+
+Para criar uma variável, criaremos uma linha vazia abaixo do stdin e acima do fechamento das chaves do main(). Nela, escreveremos var, espaço, e o nome da variável - que pode ser entrada, por exemplo.
+
+import 'dart:io';
+
+void main() {
+    print("Hello World");
+    stdin.readLineSync();
+    var entrada
+}
+
+O editor apontará um erro nessa palavra, porque temos que atribuir algum valor a ela. Por ora, vamos entender como uma variável funciona, adicionando um sinal igual, que é o símbolo de atribuição e um par de aspas duplas.
+
+Entre as aspas, escreveremos o texto "Uma mensagem". Por fim, temos que colocar ponto e vírgula no final da linha.
+
+import 'dart:io';
+
+void main() {
+    print("Hello World");
+    stdin.readLineSync();
+    var entrada = "Uma mensagem";
+}
+
+Salvaremos o arquivo com "Ctrl + S" e abriremos o terminal com "Ctrl + J" para rodar dart run. Com isso, o terminal mostrará o "Hello World".
+
+INFORMAÇÃO DE CODIGO COM DADOS REGISTRADOS/ARMAZENADOS
+
+import 'dart:io';
+
+void main() {
+    print("Olá, me chamo Dart. Qual o seu nome?");
+    var entrada = stdin.readLineSync();
+    `print("Muito prazer, $entrada")`;
+}
+
+Após $entrada, podemos prosseguir escrevendo a mensagem entre as aspas duplas. Nesse caso, escreveremos um ponto e a frase "Vamos fazer vários programas juntos!".
+
+import 'dart:io';
+
+void main() {
+    print("Olá, me chamo Dart. Qual o seu nome?");
+    var entrada = stdin.readLineSync();
+    `print("Muito prazer, $entrada. Vamos fazer vários programas juntos!")`;
+}
+
+
+
+
+
