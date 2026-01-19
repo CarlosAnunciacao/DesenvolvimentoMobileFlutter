@@ -1,6 +1,7 @@
 💙 Desenvolvimento Mobile com Flutter (Alura)
 
 Este repositório contém meus projetos, exercícios e anotações desenvolvidos durante a trilha de Desenvolvimento Mobile com Flutter na Alura. O objetivo é documentar meu progresso desde os fundamentos até conceitos avançados como persistência de dados e testes.
+
 🛠️ Tecnologias e Ferramentas
 
     Flutter (Versão 3.x)
