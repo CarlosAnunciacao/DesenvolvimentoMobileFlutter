@@ -1,0 +1,13 @@
+import 'dart:io';
+
+void main() {
+  print("Digite as horas trabalhadas:");
+  int horas = int.parse(stdin.readLineSync()!);
+
+  double salarioBruto = horas * 50.;
+  double desconto = salarioBruto * 0.05;
+  double salarioLiquido = salarioBruto - desconto; 
+
+  print("O salário líquido é $salarioLiquido;");
+
+}
