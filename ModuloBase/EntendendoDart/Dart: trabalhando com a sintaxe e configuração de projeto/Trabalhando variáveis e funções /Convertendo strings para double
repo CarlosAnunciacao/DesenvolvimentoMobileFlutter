@@ -1,0 +1,7 @@
+// Durante uma reunião, a gerente pediu para você criar uma função simples em Dart que converta uma string que representa um valor monetário 
+// para um tipo double. Além disso, ela quer que a função apenas imprima o resultado da conversão.
+
+void converterEImprimir(String valor) {
+  double valorConvertido = double.parse(valor);
+  print(valorConvertido);
+}
