@@ -1,1 +1,25 @@
-a
+import 'dart:io';
+
+void main() {
+  print("Digite o seu nome:");
+  String nome = stdin.readLineSync()!);
+
+  print("Digite o seu cpf:");
+  String cpf = stdin.readLineSync()!);
+
+  print("Digite a sua idade:");
+  int idade = int.parse(stdin.readLineSync()!);
+
+  print("Digite a sua altura (ex: 1.75):");
+  double altura = double.parse(stdin.readLineSync()!);
+
+  print("VocÊ participa da comunidade? (digite 'true' ou 'false')");
+  bool confirmacao = bool.parse(stdin.readLineSync()!);
+
+  print("Meu nome é $nome;");
+  print("Meu cpf é $cpf;");
+  print("Eu sou membro da comunidade? $confirmacao;");
+  print("Eu tenho $altura metros de altura e;");
+  print("$idade anos de idade");
+
+}
