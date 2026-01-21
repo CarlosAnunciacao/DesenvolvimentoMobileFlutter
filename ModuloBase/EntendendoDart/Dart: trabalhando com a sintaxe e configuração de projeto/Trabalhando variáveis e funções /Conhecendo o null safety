@@ -1,0 +1,16 @@
+String? nomeDoUsuario; // Variável que pode ser nula
+
+// ... (código que busca o nome do usuário)
+
+if (nomeDoUsuario != null) {
+  print('Olá, $nomeDoUsuario!');
+} else {
+  print('Erro: nome do usuário não encontrado.');
+}
+
+
+Nesse exemplo, a variável nomeDoUsuario é declarada como String?. Isso significa que ela pode conter um texto ou ser nula.
+
+O uso do operador != null verifica se a variável realmente contém um valor. Se for verdade (ou seja, a variável conter um valor), o nome do usuário é impresso. Caso contrário (a variável não contém um valor), uma mensagem de erro é exibida.
+
+Com a segurança contra nulos (null safety), você garante que seu código trate os valores nulos adequadamente, evitando surpresas e melhorando a experiência dos seus usuários.
