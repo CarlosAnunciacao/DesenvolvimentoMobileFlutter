@@ -6,3 +6,15 @@ void main() {
   print(numeroUm! + numeroDois!);
 }
 
+P.S: O codigo registrado como var é lido como "stringer", ou seja, letra. Para que seja lido como numeral é necessário alterar "var" para "double".
+
+P.S: O codigo precisa ter um complemento de "double.parse" antes do "stdin.read", só que como "double.parse" é uma função engloba o "stdin":
+
+void main() {
+  double numeroUm = double.parse(stdin.readLineSync()!);
+  double numeroDois = double.parse(stdin.readLineSync()!);
+  print(numeroUm + numeroDois);
+}
+
+
+P.S: Como garantimos ao Dart. que os valores coletados não serão nulos, não é necessário garantir na resposta via print
