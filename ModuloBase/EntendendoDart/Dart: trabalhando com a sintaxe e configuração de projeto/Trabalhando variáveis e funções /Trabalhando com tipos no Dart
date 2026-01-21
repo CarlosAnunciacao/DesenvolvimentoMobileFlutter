@@ -6,3 +6,7 @@ Quais são alguns dos tipos que existem no Dart?
     null (nulo): valores vazios, ou seja, ausência de valor;
     String (texto): sequência de caracteres. Ex.: Olá, mundo!;
     List (lista): valores ordenados. Ex.: [1, 2, 3].
+
+Note a forma como esses tipos foram escritos. List e String começam com letra maiúscula e o restante começa com letra minúscula.
+
+    Tipos primitivos começam com letra minúscula, enquanto tipos compostos começam com letra maiúscula.
