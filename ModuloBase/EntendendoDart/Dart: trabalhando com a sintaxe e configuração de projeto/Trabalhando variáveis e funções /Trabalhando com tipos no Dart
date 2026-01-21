@@ -1,0 +1,8 @@
+Quais são alguns dos tipos que existem no Dart?
+
+    int (inteiro): números inteiros, positivos e negativos, sem casas decimais. Ex.: 1 e -1;
+    double (ponto flutuante): números positivos e negativos com casas decimais. Ex.: 5.3 e -0.12;
+    bool (booleano): valores verdadeiros ou falsos. Ex.: True e False;
+    null (nulo): valores vazios, ou seja, ausência de valor;
+    String (texto): sequência de caracteres. Ex.: Olá, mundo!;
+    List (lista): valores ordenados. Ex.: [1, 2, 3].
