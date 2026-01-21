@@ -1,0 +1,18 @@
+import 'dart:io';
+
+void main() {
+  double pontosIniciais = 100;
+  
+  print("Você tem $pontosIniciais pontos.");
+  print("Quantos pontos você gostaria de resgatar?");
+  
+  double pontosRetirados = double.parse(stdin.readLineSync()!);
+
+  double pontosRestantes = calcularSubtracao(pontosIniciais, pontosRetirados);
+
+  print("Você resgatou $pontosRetirados pontos. Pontos restantes: $pontosRestantes.");
+}
+
+double calcularSubtracao(double inicial, double retirada) {
+  return inicial - retirada;
+}
