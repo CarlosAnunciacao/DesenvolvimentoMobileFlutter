@@ -1,5 +1,12 @@
-import dart.io();
+import 'dart:io';
 
- void main;
-    var numeroUm = stdin.
+void main() {
+  print("Digite um número:");
+  
+  var entrada = stdin.readLineSync()!;
+  var numeroUm = int.parse(entrada);
 
+  var resultado = numeroUm * 2;
+
+  print("O dobro de $numeroUm é: $resultado");
+}
