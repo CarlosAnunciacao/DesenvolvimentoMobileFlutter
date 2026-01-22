@@ -1,0 +1,65 @@
+void main() {
+  // --- 04 Gerenciando tarefas ---
+  List<String> tarefas = ["Estudar", "Comprar mantimentos"];
+  print('--- Tarefas ---');
+  exibirTarefas(tarefas);
+
+  print('\n' + '-' * 30 + '\n');
+
+  // --- 05 Listando funcionários ---
+  List<int> idsFuncionarios = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+  print('--- IDs Pares ---');
+  exibirIdsPares(idsFuncionarios);
+
+  print('\n' + '-' * 30 + '\n');
+
+  // --- 06 Contando produtos ---
+  List<String> produtos = ["maçã", "banana", "maçã", "laranja", "maçã"];
+  print('--- Contagem de Maçãs ---');
+  contarMacas(produtos);
+
+  print('\n' + '-' * 30 + '\n');
+
+  // --- 07 Recomendações e-commerce ---
+  List<String> produtosCarrinho = ["arroz", "feijão"];
+  List<String> produtosVisitados = ["arroz", "feijão", "macarrão", "leite", "açúcar"];
+  print('--- Itens Visitados Não Adicionados ao Carrinho ---');
+  recomendarProdutos(produtosVisitados, produtosCarrinho);
+}
+
+// 04: Função para exibir todas as tarefas
+void exibirTarefas(List<String> lista) {
+  for (var tarefa in lista) {
+    print(tarefa);
+  }
+}
+
+// 05: Função para exibir apenas IDs pares
+void exibirIdsPares(List<int> ids) {
+  for (var id in ids) {
+    if (id % 2 == 0) {
+      print(id);
+    }
+  }
+}
+
+// 06: Função para contar "maçã"
+void contarMacas(List<String> listaProdutos) {
+  int contador = 0;
+  for (var produto in listaProdutos) {
+    if (produto == "maçã") {
+      contador++;
+    }
+  }
+  print("Quantidade encontrada: $contador");
+}
+
+// 07: Função para verificar itens visitados que não estão no carrinho
+void recomendarProdutos(List<String> visitados, List<String> carrinho) {
+  for (var item in visitados) {
+    // Se o item visitado NÃO estiver contido na lista do carrinho
+    if (!carrinho.contains(item)) {
+      print("Recomendação: $item");
+    }
+  }
+}
