@@ -1,0 +1,9 @@
+import 'dart:io';
+
+void main() {
+  List<String> nomes = ['Ana', 'João', 'Maria'];
+
+  for (int i = 0; i < nomes.length; i++) {
+    stdout.writeln('Nome: ${nomes[i]}');
+  }
+}
