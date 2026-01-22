@@ -1,0 +1,34 @@
+import 'dart:io';
+
+void registrarAluno() {
+  stdout.write('Digite o nome do aluno:\n');
+  String? nome = stdin.readLineSync();
+
+  List<double> notas = [];
+
+  while (true) {
+    stdout.write('Digite uma nota para o aluno (ou "fim" para terminar):\n');
+    String? entrada = stdin.readLineSync();
+
+    if (entrada?.toLowerCase() == 'fim') {
+      break; // Encerra o laço de notas
+    }
+
+    if (entrada != null) {
+      double? nota = double.tryParse(entrada);
+      if (nota != null) {
+        notas.add(nota);
+      } else {
+        print('Entrada inválida. Digite um número ou "fim".');
+      }
+    }
+  }
+
+  print('\nRegistro concluído!');
+  print('Aluno: $nome');
+  print('Notas: $notas');
+}
+
+void main() {
+  registrarAluno();
+}
