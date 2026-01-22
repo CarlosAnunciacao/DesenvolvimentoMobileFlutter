@@ -1,0 +1,13 @@
+import 'dart:io';
+
+void exibirTarefas(List<String> tarefas) {
+  for (var tarefa in tarefas) {
+    print(tarefa);
+  }
+}
+
+void main() {
+  List<String> tarefas = ["Estudar", "Comprar mantimentos"];
+  
+  exibirTarefas(tarefas);
+}
