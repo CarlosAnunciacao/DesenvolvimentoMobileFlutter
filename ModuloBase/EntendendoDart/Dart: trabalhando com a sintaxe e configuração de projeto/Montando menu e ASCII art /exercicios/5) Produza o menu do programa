@@ -1,0 +1,29 @@
+import 'dart:io';
+
+void main() {
+  String? opcao;
+
+  while (opcao != '3') {
+    print('\n======= MENU ESCOLAR =======');
+    print('1 - Registrar um aluno e sua nota');
+    print('2 - Ver a lista de todos alunos e médias');
+    print('3 - Sair do programa');
+    stdout.write('Escolha uma opção: ');
+
+    opcao = stdin.readLineSync();
+
+    switch (opcao) {
+      case '1':
+        print('\n[Ação Selecionada]: Registrar Aluno...');
+        break;
+      case '2':
+        print('\n[Ação Selecionada]: Exibir Lista...');
+        break;
+      case '3':
+        print('Encerrando o programa. Até logo!');
+        break;
+      default:
+        print('Opção inválida! Tente novamente.');
+    }
+  }
+}
