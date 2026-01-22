@@ -1,14 +1,18 @@
-// Para começar, escolha o navegador de sua preferência e acesse dartpad.dev. 
-Esse será o ambiente onde desenvolveremos e executaremos o programa ao longo do curso. 
-
-void enviarEmail(String email){
-    print('mensagem enviada para: $email');
+void enviarEmail(String email) {
+  print('mensagem enviada para: $email');
 }
 
-void main(){
-    String joaoEmail = 'joao@gmail.com';
-    String mariaEmail ='maria@gmail.com';
-    
-    enviarEmail(joaoEmail);
-    enviarEmail(mariaEmail);
+void main() {
+  // código comentado
+
+  Map<String, String> pessoasEmails = {
+    'joao': 'joao@gmail.com',
+    'maria': 'maria@gmail.com',
+  };
+
+  pessoasEmails['enzo'] = 'enzo@gmail.com';
+
+  for (String nome in pessoasEmails.keys) {
+    print(nome);
+  }
 }
