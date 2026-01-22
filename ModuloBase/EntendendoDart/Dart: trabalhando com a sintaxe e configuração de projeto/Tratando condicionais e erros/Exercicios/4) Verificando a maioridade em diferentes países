@@ -1,0 +1,43 @@
+import 'dart:io';
+
+void main() {
+  print("Digite a sua idade:");
+  String? entradaIdade = stdin.readLineSync();
+  
+  print("Digite o país (Brasil, EUA ou Japao):");
+  String? pais = stdin.readLineSync()?.trim().toLowerCase();
+
+  if (entradaIdade != null && pais != null) {
+    int? idade = int.tryParse(entradaIdade);
+
+    if (idade == null) {
+      print("Erro: Idade inválida.");
+      return;
+    }
+
+    if (pais == "brasil") {
+      if (idade >= 18) {
+        print("No Brasil, com $idade anos, você JÁ PODE dirigir.");
+      } else {
+        print("No Brasil, você só pode dirigir aos 18 anos. Falta(m) ${18 - idade} ano(s).");
+      }
+    } 
+    else if (pais == "eua" || pais == "estados unidos") {
+      if (idade >= 16) {
+        print("Nos EUA, com $idade anos, você JÁ PODE dirigir.");
+      } else {
+        print("Nos EUA, você só pode dirigir aos 16 anos. Falta(m) ${16 - idade} ano(s).");
+      }
+    } 
+    else if (pais == "japao" || pais == "japão") {
+      if (idade >= 20) {
+        print("No Japão, com $idade anos, você JÁ PODE dirigir.");
+      } else {
+        print("No Japão, você só pode dirigir aos 20 anos. Falta(m) ${20 - idade} ano(s).");
+      }
+    } 
+    else {
+      print("País não cadastrado no sistema.");
+    }
+  }
+}
