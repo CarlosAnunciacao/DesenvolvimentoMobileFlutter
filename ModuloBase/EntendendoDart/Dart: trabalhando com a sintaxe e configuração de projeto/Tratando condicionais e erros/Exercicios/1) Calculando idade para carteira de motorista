@@ -1,0 +1,17 @@
+import 'dart:io';
+
+void main() {
+  print("Digite a sua idade:");
+  
+  String? entrada = stdin.readLineSync();
+  
+  if (entrada != null) {
+    int idade = int.parse(entrada);
+
+    if (idade >= 18) {
+      print("Você tem $idade anos. Você JÁ PODE dirigir!");
+    } else {
+      print("Você tem $idade anos. Você AINDA NÃO pode dirigir.");
+    }
+  }
+}
