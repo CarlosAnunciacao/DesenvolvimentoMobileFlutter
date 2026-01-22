@@ -1,0 +1,20 @@
+import 'dart:io';
+
+void exibirTarefas(List<String> lista) {
+  print('--- Minha Lista de Tarefas ---');
+  
+  if (lista.isEmpty) {
+    print('Nenhuma tarefa pendente.');
+    return;
+  }
+
+  for (int i = 0; i < lista.length; i++) {
+    stdout.writeln('${i + 1}. ${lista[i]}');
+  }
+}
+
+void main() {
+  List<String> tarefas = ["Estudar", "Comprar mantimentos"];
+
+  exibirTarefas(tarefas);
+}
