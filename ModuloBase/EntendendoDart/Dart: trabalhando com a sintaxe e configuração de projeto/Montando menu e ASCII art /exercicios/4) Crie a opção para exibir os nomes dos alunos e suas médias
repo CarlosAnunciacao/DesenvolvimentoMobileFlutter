@@ -1,0 +1,52 @@
+import 'dart:io';
+
+List<String> listaNomes = [];
+List<double> listaMedias = [];
+
+double calcularMedia(List<double> notas) {
+  if (notas.isEmpty) return 0.0;
+  double soma = notas.reduce((a, b) => a + b);
+  return soma / notas.length;
+}
+
+void registrarAlunos() {
+  while (true) {
+    stdout.write('\nDigite o nome do aluno (ou "sair" para listar todos): ');
+    String nome = stdin.readLineSync()!;
+
+    if (nome.toLowerCase() == 'sair') break;
+
+    List<double> notas = [];
+    while (true) {
+      stdout.write('Digite uma nota para $nome (ou "fim"): ');
+      String entrada = stdin.readLineSync()!;
+
+      if (entrada.toLowerCase() == 'fim') break;
+
+      double? nota = double.tryParse(entrada);
+      if (nota != null) {
+        notas.add(nota);
+      }
+    }
+
+    listaNomes.add(nome);
+    listaMedias.add(calcularMedia(notas));
+  }
+}
+
+void exibirResultados() {
+  print('\n' + '=' * 20);
+  print('RELATÓRIO DE NOTAS');
+  print('=' * 20);
+
+  for (int i = 0; i < listaNomes.length; i++) {
+    print('Aluno: ${listaNomes[i]} | Média: ${listaMedias[i].toStringAsFixed(1)}');
+  }
+  
+  print('=' * 20);
+}
+
+void main() {
+  registrarAlunos();
+  exibirResultados();
+}
