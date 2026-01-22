@@ -1,0 +1,25 @@
+import 'dart:io';
+
+double saldo = 1000.0; // Saldo inicial em reais
+
+void main() {
+  print('Boas-vindas ao seu banco digital!');
+  print('Seu saldo atual é de: R\$ ${saldo.toStringAsFixed(2)}');
+
+  print('Digite o valor do Pix que deseja realizar:');
+  
+  String? entrada = stdin.readLineSync();
+  
+  if (entrada != null) {
+    double valorPix = double.parse(entrada);
+
+    if (valorPix <= saldo) {
+      saldo = saldo - valorPix; // Debita o valor do saldo
+      print('Transferência realizada com sucesso!');
+      print('Novo saldo: R\$ ${saldo.toStringAsFixed(2)}');
+    } else {
+      print('Saldo insuficiente');
+    }
+    // ----------------------------------------
+  }
+}
