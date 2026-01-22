@@ -1,0 +1,45 @@
+import 'dart:io';
+
+double calcularMedia(List<double> notas) {
+  if (notas.isEmpty) return 0.0;
+  
+  double soma = 0;
+  for (double nota in notas) {
+    soma += nota;
+  }
+  return soma / notas.length;
+}
+
+void registrarEProcessar() {
+  stdout.write('Digite o nome do aluno:\n');
+  String? nome = stdin.readLineSync();
+
+  List<double> notas = [];
+
+  while (true) {
+    stdout.write('Digite uma nota para o aluno (ou "fim" para terminar):\n');
+    String? entrada = stdin.readLineSync();
+
+    if (entrada?.toLowerCase() == 'fim') {
+      break;
+    }
+
+    double? nota = double.tryParse(entrada ?? '');
+    if (nota != null) {
+      notas.add(nota);
+    } else {
+      print('Por favor, digite um número válido.');
+    }
+  }
+
+  double mediaFinal = calcularMedia(notas);
+
+  print('\n--- Boletim ---');
+  print('Aluno: $nome');
+  print('Notas: $notas');
+  print('Média Final: ${mediaFinal.toStringAsFixed(2)}');
+}
+
+void main() {
+  registrarEProcessar();
+}
