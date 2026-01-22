@@ -1,1 +1,45 @@
-a
+void main() {
+  double numeroUm = double.parse(stdin.readLineSync()!);
+  double numeroDois = double.parse(stdin.readLineSync()!);
+  String operacao = stdin.readLineSync()!;
+
+    void multiplicacao() {
+        if (operacao == "+") {
+            soma();
+        } else {
+            if (operacao == "-") {
+                subtracao();
+            } else {
+                if (operacao == "*") {
+                    multiplicacao();
+                } else {
+                    if (operacao == "/") {
+                        divisao();
+                    }
+                }
+            }
+        }
+    }
+
+// -----------CASE PARA LEGIBILIDADEM
+
+switch (operacao) {
+    case "+":
+        soma();
+        break;
+    
+    case "-":
+        subtracao();
+        break;
+
+    case "*":
+        multiplicacao();
+        break;
+
+    case "/":
+        divisao();
+        break;
+}
+
+
+}
